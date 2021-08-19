@@ -9,8 +9,8 @@ struct trie{
   trie()
   {
      memset(child, 0, sizeof(child));
-     isend = false;  
-  }
+     isend = false; 
+   }
 
 };
 
@@ -31,6 +31,7 @@ bool search(string str)
   return cur->isend;
 }
 
+
 void insert(string str)
 {
    struct trie* cur = root;
@@ -49,6 +50,7 @@ void insert(string str)
 
    cur->isend = true;
 }
+ 
 
 int main(){
     
