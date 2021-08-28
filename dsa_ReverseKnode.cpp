@@ -32,7 +32,7 @@ node* recuriceReverseK(node* &head, int k){
     }
 
     if(nextptr != NULL){
-         head->next = recuriceReverseK(nextptr,k);     
+        head->next = recuriceReverseK(nextptr,k);     
     }
 
     return prevptr;

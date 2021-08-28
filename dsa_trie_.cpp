@@ -8,10 +8,9 @@ struct trie{
   
   trie()
   {
-     memset(child, 0, sizeof(child));
-     isend = false; 
-   }
-
+    memset(child, 0, sizeof(child));
+    isend = false; 
+  }
 };
 
 struct trie* root;
