@@ -3,51 +3,39 @@
 using namespace std;
 
 
-void s(){
-
- int t,n,d,h, c=0,count=0;
-  
-     cin>>n>>d>>h;
-     
-     int arr[n];
-
-     for(int i=0; i<n; i++)
-     {
-        cin>>arr[i];
-      }
-
-     for(int i=0; i<n; i++)
-     {
-        if(arr[i] > 0)
-          count = count + arr[i];
-        else if(arr[i] == 0){
-          
-          if(count < d)
-             count = 0;
-          else 
-             count = count - d;
-        }
-        
-        if(count > h)
-          c++;
-     }
-
-       if(c > 0)
-          cout<<"Yes"<<endl;
-        else
-          cout<<"No"<<endl;
-     
-}
-
-
 int main()
 {
-   int t;
-   cin>>t;
+  int n;
+  cin>>n;
 
-   for(int i=0; i<t; i++)
-       s();
-   
-   return 0;
+  vector<int> masks(n,0);
 
+  for(int i=0; i<n; i++)
+  {
+     int num_worker;
+     cin>>num_worker;
+
+     int mask=0;
+
+     for(int j=0; i < num_worker; ++j)
+     {
+        int day;
+        cin>>day;
+        mask = (mask | (1<<day));
+     }   
+     masks[i] = mask;
+  }
+
+  for(int i=0; i<n; i++)
+  {
+    for(int j = i+1; j<n; ++j)
+    {
+      int intersesction = (masks[i] & masks[j]);
+      int common_days = __buildin_popcount(intersesction);
+
+      cout<<i<<" "<<j<<" "<<intersesction<<endl;
+    }
+  }
+    
+  
 }
