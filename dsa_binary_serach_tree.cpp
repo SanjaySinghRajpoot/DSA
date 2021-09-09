@@ -1,4 +1,4 @@
- #include<bits/stdc++.h>
+#include<bits/stdc++.h>
 
 using namespace std;
 
@@ -22,11 +22,13 @@ Node* insertBST(Node *root, int val){
       	return new Node(val);
       }
 
-	  if(val < root->data){
+	  if(val < root->data)
+	  {
 	  	 root->left = insertBST(root->left, val);
 	  }
 
-	  else{
+	  else
+	  {
 	  	root->right = insertBST(root->right, val);
 	  }
 

@@ -1,41 +1,68 @@
-#include<bits/stdc++.h>
+// #include<bits/stdc++.h>
 
-using namespace std;
+// using namespace std;
 
 
-int main()
-{
-  int n;
-  cin>>n;
+// int main()
+// {
+//   int t;
+//   cin>>t;
+ 
+//   int a,b,c,d,e;
 
-  vector<int> masks(n,0);
+//   int v[3];
 
-  for(int i=0; i<n; i++)
-  {
-     int num_worker;
-     cin>>num_worker;
+//   while(t--)
+//   {
+//     cin>>a>>b>>c>>d>>e;
 
-     int mask=0;
+//     if((a + b) <= d && c <= e && a+b >= c)
+//         cout<<"YES"<<endl;
+//     else if(a + c <= d && b <= e && a+c >= b)
+//         cout<<"YES"<<endl;
+//     else if(b + c <= d && a <= e && b+c >= a)
+//         cout<<"YES"<<endl;
+//     else
+//         cout<<"NO"<<endl;
+//   }
 
-     for(int j=0; i < num_worker; ++j)
-     {
-        int day;
-        cin>>day;
-        mask = (mask | (1<<day));
-     }   
-     masks[i] = mask;
-  }
 
-  for(int i=0; i<n; i++)
-  {
-    for(int j = i+1; j<n; ++j)
-    {
-      int intersesction = (masks[i] & masks[j]);
-      int common_days = __buildin_popcount(intersesction);
-
-      cout<<i<<" "<<j<<" "<<intersesction<<endl;
-    }
-  }
-    
   
-}
+// }
+
+
+// #include<bits/stdc++.h>
+
+// using namespace std;
+
+// int main()
+// {
+//   int t;
+//   cin>>t;
+  
+//   int n,a,b;
+  
+//   string str;
+
+//   while(t--)
+//   {
+//     cin>>n>>a>>b;
+    
+//     int z=0,o=0,time;
+
+
+//     cin>>str;
+
+//     for(int i=0; i<n; i++)
+//     { 
+//        if(str[i] == '0')
+//           z++;
+//        else
+//          o++;
+//     }
+
+//     time = (z*a + o*b);
+
+//     cout<<time<<endl;
+//   }
+// }
