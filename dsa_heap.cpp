@@ -48,7 +48,8 @@ void insert(vector<int> &hT, int newNum){
 
 void printArray(vector<int> &hT){
     
-    for(int i=0; i< hT.size(); ++i){
+    for(int i=0; i< hT.size(); ++i)
+    {
          cout<<hT[i]<<" ";
          cout<<"\n";
     }

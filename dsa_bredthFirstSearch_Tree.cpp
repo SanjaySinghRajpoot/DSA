@@ -80,6 +80,33 @@ void sizeOf(Node* root){
 // }
 
 
+// void levelOrderTraversal(Node* root){
+
+//    if(root == NULL)
+//       return;
+     
+//      queue<Node*> q;
+
+//      q.push(root);
+
+//      while(q.empty() == false)
+//      {
+//          Node* curr = q.front();
+
+//          q.pop();
+
+//         cout<<curr->data<<endl;
+
+//         if(curr->left != NULL)
+//          q.push(root->left);
+     
+//         if(curr->right != NULL)
+//          q.push(root->right);
+//      }
+
+// }
+
+
 int main(){
    
    Node* root = new Node(1);

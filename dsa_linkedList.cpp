@@ -47,7 +47,7 @@ void display(node* head){
 	cout<<endl;
 }
 
-void insertAtHead(node* &head,int val){
+void insertAtHead(node* &head, int val){
    node* n = new node(val);
    n->next = head;
    head = n;

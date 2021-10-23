@@ -2,56 +2,38 @@
 
 using namespace std;
 
-struct Node{
-    int val;
-    Node* left;
-    Node* right;
 
-    Node(int data){
-         val = data;
-         left = NULL;
-         right = NULL;
-    }
-};
+vector<int> k;
 
-vector<int> sq,sp;
+void maxProfit(vector<int>& v, int idx, int target) 
+{
+   
+   if(idx == v.size())
+      return;
+   
+   if(v[idx] == target)
+   {
+      k.push_back(idx+1);
+   }
 
-void LowestCAq(Node* root, Node* p, Node* q){
-    
+   maxProfit(v, idx+1, target);
 
-    if((root->left == NULL || root->right == NULL) && ((root->val != q))){
-        sq.clear();        
-    }
-    
-    sq.push_back(root->val);
-    LowestCA(root->left, p, q);    
-    LowestCA(root->right, p, q);
+   
+   
 }
-
-void LowestCAp(Node* root, Node* p, Node* q){
-    
-
-    if((root->left == NULL || root->right == NULL) && ((root->val != p))){
-        sp.clear();        
-    }
-    
-    sp.push_back(root->val);
-    LowestCA(root->left, p, q);    
-    LowestCA(root->right, p, q);
-}
-
 
 
 int main(){
-
-  Node* root = new Node(1);
-  root->left = new Node(2);
-  root->right = new Node(3);
-  root->left->left = new Node(4);
-  root->left->right = new Node(5);
-  root->right->left = new Node(6);
   
-  LowestCA(root, root->left->left, root->left->right);
+  vector<int> v = {4,8,2,3,4,5,1,4};
+
+  maxProfit(v, 0, 4);
+
+  for(int i=0; i<k.size(); i++)
+  {
+     cout<<k[i]<<endl;
+  }
+
 }
 
 

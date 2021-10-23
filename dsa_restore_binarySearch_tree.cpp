@@ -29,6 +29,7 @@ void calcPointers(node* root,  node** first, node** mid, node** last, node** pre
    calcPointers(root->left, first, mid, last, prev);
    
    if(*prev && root->data < ((*prev)->data)){
+    
       if(!*first){
           *first = *prev;
           *mid = root;
@@ -63,7 +64,7 @@ void restoreBST(node* root){
 
 void inorder(node* root){ 
    
-   if(root == NULL){
+   if(root == NULL){  // try to mention the base contition for the recursive cases 
      return;
    }
 
