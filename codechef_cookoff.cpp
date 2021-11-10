@@ -1,53 +1,50 @@
 #include<bits/stdc++.h>
-#include<iomanip>
-#define int long long int
-#define all(x) x.begin(),x.end()
-#define rep(i,a,n) for (int i=a;i<n;i++)
-#define per(i,a,n) for (int i=n-1;i>=a;i--)
-#define pb push_back
-#define mp make_pair
-#define fast_io ios_base::sync_with_stdio(false);cin.tie(NULL)
+
 using namespace std;
-void precision(int a){cout<<setprecision(a)<<fixed;}
 
-void init_code(){
-    fast_io;
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    #endif
-}
+const int size = 1e7+6;
 
-int32_t main() {
-    init_code();
-    int T;
-    cin >> T;
-    while(T--){
-        int n,k;cin>>n>>k;
-        int arr[n];
-        int maxi = INT_MIN;
-        rep(i,0,n){
-            cin>>arr[i];
-            maxi = max(maxi,arr[i]);
+bool vis[size];
+vector<int> adj[size];
+
+
+int main()
+{
+   int n,m;
+   cin>>n>>m;
+
+   for(int i=0; i<m; i++)
+   {
+      int u,v;
+
+      adj[u].push_back(v);
+      adj[v].push_back(u);
+   }
+
+   queue<int> q;
+   q.push(1);
+   vis[1] = true;
+
+   while(!q.empty())
+   {
+      int node = q.front();
+      cout<<node<<" - ";
+      q.pop();
+
+      vector<int>:: iterator itr;
+      
+      for(itr = adj[node].begin(); itr != adj[node].end(); itr++)
+      {
+        if(!vis[*itr])
+        {
+          q.push(*itr);  // bfs algo 
+          vis[*itr] = true;
         }
-        vector<int> v;
-        rep(i,0,n){
-            if(arr[i] == maxi){
-                v.pb(i);
-            }
-        }
-        int ans = 0;
-        for(auto x : v){
-            if(x == n-1){
-                ans++;
-                continue;
-            }
-            if(x>=k-1){
-                ans += (n-x-1)+1;
-            }
-        }
-        cout<<ans<<"\n";
-    }
-    
+      }
+
+   }
+
+
+
     return 0;
 }

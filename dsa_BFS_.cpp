@@ -91,9 +91,10 @@ int main(){
         
         vector<int> :: iterator itr;
 
-        for(itr = adj[node].begin(); itr != adj[node].end(); itr++){
-           
-           if(!vis[*itr]){
+        for(itr = adj[node].begin(); itr != adj[node].end(); itr++)
+        {   
+           if(!vis[*itr])
+           {
                 vis[*itr] = 1;
                 q.push(*itr);
            }
