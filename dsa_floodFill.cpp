@@ -21,6 +21,7 @@ void floodfill(vector<vector<int>> arr, int row, int col, string psf)
 
     check[row][col] = true;
     
+    // step by step check all the steps and add it to the string
     floodfill(arr, row-1, col, psf + "t");
     floodfill(arr, row, col-1, psf + "l");
     floodfill(arr, row+1, col, psf + "b");
