@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//class adding new comments
 class node{
 public:
 	int data;
