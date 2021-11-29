@@ -15,7 +15,7 @@ public:
 };
 
 void insertAtHead(node* &head, int val){
-	node* n = new node(val);
+	node* n = new node(val); // create a new node and assign its value to the node
    
     if(head == NULL){
         n->next = n;

@@ -21,7 +21,7 @@ bool checkBST(Node* root1, Node* root2){
          
      if(root1 == NULL && root2 == NULL){
          return true;
-     }
+     }  
  
      else if(root1 == NULL || root2 == NULL){
          return false;                     
