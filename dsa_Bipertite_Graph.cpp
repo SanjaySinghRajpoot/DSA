@@ -27,7 +27,6 @@ void color(int u, int curr){
    vis[u] = true;
 
    for(auto i : adj[u]){
-      
       color(i, curr xor 1);
    }
 }

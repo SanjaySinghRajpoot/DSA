@@ -19,7 +19,7 @@ void insertAtTail(node* &head, int val){
 
    node* n = new node(val); // new node created
 
-   if(head == NULL){
+   if(head == NULL){ // initial value
       head = n;
       return;
    }
@@ -33,8 +33,6 @@ void insertAtTail(node* &head, int val){
    temp->next = n;
 
 }
-
-
 
 void display(node* head){
 
