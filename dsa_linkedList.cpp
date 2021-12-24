@@ -83,6 +83,27 @@ void deletion(node* &head, int val){
 
 }
 
+
+// void deletionAtHeadNew(node* &head, int val){
+//    if(head == NULL){
+//       return;
+//    }
+
+//    if(head->next == NULL){
+//       deleteAtHead(head);
+//    }
+
+//    Node* temp = head;
+//    while(temp->val != val){
+//        temp = temp->next;
+//    }
+   
+//    Node* todelete = temp->next;
+//    temp->next = temp->next->next;
+   
+//    delete todelete;
+// }
+
 bool search(node* head, int key){
 
    node* temp = head;
@@ -104,14 +125,18 @@ int main(){
   insertAtTail(head, 1);
   insertAtTail(head, 2);
   insertAtTail(head, 3);
+  insertAtTail(head, 4);
+  insertAtTail(head, 5);
   display(head);
   cout<<endl;
   // insertAtHead(head,4);
   // insertAtHead(head,5);
   // display(head);
   
-  // deletion(head,2);
+  deletion(head,2);
   delteAthead(head);
+
+  // display the linked list 
   display(head);  	
 
 
