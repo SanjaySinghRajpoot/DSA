@@ -39,6 +39,34 @@ node* recuriceReverseK(node* &head, int k){
 
 }
 
+node* recursive(node* &head, int k){
+    
+    node* temp = head;
+
+    node* previous = NULL;
+    node* current = head;
+    node* front;
+
+    int c=0;
+
+    while(current != NULL && c<=k){
+
+         front = current->next;         
+         current->next = previous;
+
+         previous = current;
+         current = front;         
+         c++;
+    }
+
+    if(front != NULL){
+        head->next = recursive(front, k);
+    }
+
+    return previous;
+}
+
+
 void insertAttail(node* &head, int val){
    
    node* n = new node(val);
