@@ -27,35 +27,34 @@ void printEnc(string str, string ans);
       char ch1 = (char)('a' + num - 1);
       ans = ans + ch1;
 
-      cout<<ans<<endl;
+      cout << ans << endl;
     }
   }
   else
   {
-     char ch = str[0];
-     String roq = ques.substring(1);
+    char ch = str[0];
+    String roq = ques.substring(1);
 
-     if(ch == '0')
-     {
-       return;
-     }
-     else
-     {
-        int chv = ch - '0';
-        char code = (char)('a' + chv -1);
-        printEnc(roq, ans + code);
-     }
+    if (ch == '0')
+    {
+      return;
+    }
+    else
+    {
+      int chv = ch - '0';
+      char code = (char)('a' + chv - 1);
+      printEnc(roq, ans + code);
+    }
 
-     string ch12 = str.substr(0,2);
-     string ans = str.substr(2);
+    string ch12 = str.substr(0, 2);
+    string ans = str.substr(2);
 
-     int ch12v = 
+    int ch12v =
 
-     if(ch12v <= 26)
-     {
-       char code 
-     }
-
+        if (ch12v <= 26)
+    {
+      char code
+    }
   }
 }
 

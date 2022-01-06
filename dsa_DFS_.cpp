@@ -41,7 +41,6 @@ void dfs(int node){
 
 int main(){ 
    int n,m;
-
    cin>>n>>m;
 
    for(int i=0; i<n; i++){
@@ -56,11 +55,9 @@ int main(){
 
      adj[v].push_back(u);
      adj[u].push_back(v);
-
    }
 
      dfs(1);
-
 }
 
 // #include<bits/stdc++.h>
