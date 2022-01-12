@@ -74,6 +74,20 @@ void cycledetection(node* root){
         
 }
 
+void removeCycle(node* head) 
+{
+    node* slow = head;
+    node* fast = head;
+
+    do{
+      slow = slow->next;
+      fast = fast->next->next;
+    } while(slow != fast);     
+
+    fast = head;
+    
+}
+
 int main()
 {
     node* head;

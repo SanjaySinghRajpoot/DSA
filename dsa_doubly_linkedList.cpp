@@ -92,6 +92,15 @@ void display(node* &head){
 	cout<<endl;
 }
 
+void deletionCheck(node* head, int pos){
+    
+    node* temp = head;
+    if(pos == 0){
+      delete head;
+      return;
+    }
+}
+
 int main(){
   
   node* head = NULL;
