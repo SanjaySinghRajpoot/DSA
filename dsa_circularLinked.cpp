@@ -27,7 +27,7 @@ void insertAtHead(node* &head, int val){
 
 	while(temp->next != head){
        temp = temp->next;
-	} // to reach the end of linked list 
+	} 
 
 	temp->next = n;   // n has to be added
 	n->next = head;
@@ -53,7 +53,7 @@ void insertAtTail(node* &head, int val){
    
 }
 
-void delteAthead(node* &head){
+void delteAthead(node* &head){   // delete at head function
     node* temp = head;
 
     while(temp->next != head){
