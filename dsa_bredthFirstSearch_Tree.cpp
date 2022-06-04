@@ -14,7 +14,7 @@ struct Node{
 	}
 };
 
-
+// in level order traversal we use queues to store the top pointer
 void levelOrderTraversal(Node* root){
    
    if(root == NULL) return;

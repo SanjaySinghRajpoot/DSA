@@ -104,6 +104,9 @@ void deletion(node* &head, int val){
 //    delete todelete;
 // }
 
+
+
+
 bool search(node* head, int key){
 
    node* temp = head;
